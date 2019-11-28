@@ -1,0 +1,64 @@
+
+body{
+  font-family: arial;
+  background-color: d9e6f2;
+  text-align: center;
+}
+
+pre{
+  text-align: left;
+}
+
+.title{
+  font-size:large;
+  font-weight: bold;
+}
+
+/* Unselected Key */
+.pickkey0
+{
+  width: 8%;
+  text-align: center;
+  border: 0px ;
+}
+
+/* Selected Key */
+.pickkey1
+{
+  width: 8%;
+  text-align: center;
+  font-weight: bold;
+  border: 1px solid black;
+}
+
+/* Common attributes of all frets */
+.fret
+{
+  font-size:small;
+  text-align: center;
+  width: 40px;
+  border: 1px solid black;
+  padding: 3 3 3 3;
+}
+
+.plainOff
+{
+}
+
+.nutOff
+{
+  background-color: faba83;
+}
+
+.markerOff
+{
+  background-color: FFEFD8;
+}
+
+/* Highlighted spot */
+.fretOn
+{
+  background-color: ffffff;
+  padding: 0 0 0 0;
+  border: 3px solid black;
+}
