@@ -10,41 +10,45 @@
 <!-------------------------------------------->
 <!--------------- Body ----------------------->
 <body onLoad="init()">
-<!--------- Main table ----------------------->
+<h1>Frets</h1>
 <br>
-<table align="center">
 <!--------- Title row ------------------------>
+<table width="100%" align="center">
 <tr>
-  <td align="left">
-  <table width="100%">
-    <tr>
-      <td class="title">Frets</td>
-    </tr>
-    <tr>
-      <td>
-        Link Fretboards<input type="checkbox" onclick="clickLinkFBs(this)" checked/>
-      </td>
-      <td>
-        Show Interval<input type="checkbox" onclick="clickShowInterval(this)" checked/>
-      </td>
-      <td>
-        Show Note Names<input type="checkbox" onclick="clickShowNotes(this)"/>
-      </td>
-    </tr>
-    <tr>
-      <td>
-         &nbsp;&nbsp;&nbsp;Guitar:<input type="radio" id="guitarRadio" name="instruType" CHECKED onclick="clickInstruType()"/>
-         &nbsp;Fiddle/Mando:<input type="radio" id="fiddleRadio" name="instruType" onclick="clickInstruType()"/>
-         &nbsp;Uke:<input type="radio" id="ukuleleRadio" name="instruType" onclick="clickInstruType()"/>
-         &nbsp;Bass:<input type="radio" id="bassRadio" name="instruType" onclick="clickInstruType()"/>
-         &nbsp;Dobro:<input type="radio" id="dobroRadio" name="instruType" onclick="clickInstruType()"/>
-      </td>
-    </tr>
-    </table>
-</td>
-<td width="10%" align="center">&nbsp;</td>
+  <td>
+    Guitar:<input type="radio" id="guitarRadio" name="instruType" CHECKED onclick="clickInstruType()"/>
+  </td>
+  <td>
+    Fiddle/Mando:<input type="radio" id="fiddleRadio" name="instruType" onclick="clickInstruType()"/>
+  </td>
+  <td>
+    Uke:<input type="radio" id="ukuleleRadio" name="instruType" onclick="clickInstruType()"/>
+  </td>
+  <td>
+    Bass:<input type="radio" id="bassRadio" name="instruType" onclick="clickInstruType()"/>
+  </td>
+  <td>
+    Dobro:<input type="radio" id="dobroRadio" name="instruType" onclick="clickInstruType()"/>
+  </td>
 </tr>
 </table>
+<br>
+
+<table width="100%" align="center">
+<tr>
+  <td>
+    Link Fretboards<input type="checkbox" onclick="clickLinkFBs(this)" checked/>
+  </td>
+  <td>
+    Show Interval<input type="checkbox" onclick="clickShowInterval(this)" checked/>
+  </td>
+  <td>
+    Show Note Names<input type="checkbox" onclick="clickShowNotes(this)"/>
+  </td>
+</tr>
+</table>
+
+<br>
 
 <table align="center">
 <!-------- Pick Key 0 Row ---------------------->
