@@ -12,19 +12,26 @@
 <body onLoad="init()">
 <!--------- Main table ----------------------->
 <br>
-<table>
+<table align="center">
 <!--------- Title row ------------------------>
 <tr>
-<td align="left">
-   <table width="100%">
-   <tr>
+  <td align="left">
+  <table width="100%">
+    <tr>
       <td class="title">Frets</td>
+    </tr>
+    <tr>
       <td>
-         Link Fretboards<input type="checkbox" onclick="clickLinkFBs(this)" checked/>
+        Link Fretboards<input type="checkbox" onclick="clickLinkFBs(this)" checked/>
       </td>
       <td>
-         Show Note Names<input type="checkbox" onclick="clickShowNotes(this)"/>
+        Show Interval<input type="checkbox" onclick="clickShowInterval(this)" checked/>
       </td>
+      <td>
+        Show Note Names<input type="checkbox" onclick="clickShowNotes(this)"/>
+      </td>
+    </tr>
+    <tr>
       <td>
          &nbsp;&nbsp;&nbsp;Guitar:<input type="radio" id="guitarRadio" name="instruType" CHECKED onclick="clickInstruType()"/>
          &nbsp;Fiddle/Mando:<input type="radio" id="fiddleRadio" name="instruType" onclick="clickInstruType()"/>
@@ -39,7 +46,7 @@
 </tr>
 </table>
 
-<table>
+<table align="center">
 <!-------- Pick Key 0 Row ---------------------->
 <tr>
   <td align="center"></td>
@@ -107,7 +114,7 @@
   </td>
 </tr>
 <!-------------------------------------------->
-</table
+</table>
 
 <!------- Dump area for debugging ----------->
 <br>

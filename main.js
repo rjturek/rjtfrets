@@ -31,28 +31,27 @@ var activeTones1 = new Array()
 var activeToneSets = new Array(activeTones0, activeTones1)
 
 var linkFBs = true
+var showInterval = true
 var showNoteNames = false
 
 var dumptext = "\n"
 
 //====================================================
-function init()
-{
- if (document.getElementById("dumpArea").innerText == undefined)
- {
-   supportsInnerText = false;
- }
+function init() {
+  if (document.getElementById("dumpArea").innerText == undefined) {
+    supportsInnerText = false;
+  }
 
- numStrings = tunings.length
+  numStrings = tunings.length
 
- allocStrings(0)
- allocStrings(1)
+  allocStrings(0)
+  allocStrings(1)
 
- initFretboard(0)
- initFretboard(1)
+  initFretboard(0)
+  initFretboard(1)
 
- pickKey(0, 0)
- pickKey(1, 5)
+  pickKey(0, 0)
+  pickKey(1, 5)
 }
 
 //===================================================
@@ -127,6 +126,18 @@ function clickShowNotes(checkbox)
     setStringInts(1)
 }
 
+function clickShowInterval(checkbox)
+{
+    if (checkbox.checked) {
+      showInterval = true
+    }
+    else {
+      showInterval = false
+    }
+    setStringInts(0)
+    setStringInts(1)
+}
+
 
 //===============
 function clearNotes(fbNum)
@@ -172,45 +183,45 @@ function allocStrings(fbNum)
 //      dumptext += spot.absoluteTone + "."
     }
     fbStrings[i] = aString
- }
+  } 
 }
 
 
 //====================================================
 function initFretboard(fbNum)
 {
- var fbStrings = fbStringSets[fbNum]
+  var fbStrings = fbStringSets[fbNum]
 
- var fb=document.getElementById('fretboard' + fbNum)
- innerStuff(fb, "");
+  var fb=document.getElementById('fretboard' + fbNum)
+  innerStuff(fb, "");
 
- for (i=0; i<numStrings; i++)
- {
-   row = fb.insertRow(0)
-   for (j=0; j<kbLength; j++)
-   {
-     var td=row.insertCell(j)
+  for (i=0; i<numStrings; i++)
+  {
+    row = fb.insertRow(0)
+    for (j=0; j<kbLength; j++)
+    {
+      var td=row.insertCell(j)
 
-     var funcStr = "spotClicked(" + fbNum + "," + i + "," + j + ")"
-     td.onclick=Function(funcStr)
+      var funcStr = "spotClicked(" + fbNum + "," + i + "," + j + ")"
+      td.onclick=Function(funcStr)
 
-     var spot=fbStrings[i][j]
+      var spot=fbStrings[i][j]
 
-     spot.td = td
-   }
- }
+      spot.td = td
+    }
+  }
 }
 
 //====================================================
 function getIdxForStringOffset(loopIdx, stringNum)
 {
-    var openOffset = tunings[stringNum]
-    var arrayIdx = openOffset + loopIdx
-    if (arrayIdx > 11)
-    {
+  var openOffset = tunings[stringNum]
+  var arrayIdx = openOffset + loopIdx
+  if (arrayIdx > 11)
+  {
       arrayIdx = arrayIdx - 12
-    }
-    return arrayIdx
+  }
+  return arrayIdx
 }
 
 //====================================================
@@ -303,20 +314,21 @@ function isToneActive(activeTonesArray, tone)
 //===================================================
 function tdLabels(fbStrings, row, col)
 {
- for (i=0; i<numStrings; i++)
- {
-   for (j=0; j<kbLength; j++)
-   {
-     if (showNoteNames)
-     {
-       innerStuff(fbStrings[i][j].td, fbStrings[i][j].noteName + "/" + fbStrings[i][j].intName);
-     }
-     else
-     {
-       innerStuff(fbStrings[i][j].td, fbStrings[i][j].intName);
-     }
-   }
- }
+  for (i=0; i<numStrings; i++)
+  {
+    for (j=0; j<kbLength; j++)
+    {
+      if (showNoteNames && showInterval)   {
+        innerStuff(fbStrings[i][j].td, fbStrings[i][j].noteName + "/" + fbStrings[i][j].intName);
+      }  else if (showInterval) {
+        innerStuff(fbStrings[i][j].td, fbStrings[i][j].intName);
+      } else if (showNoteNames)   {
+        innerStuff(fbStrings[i][j].td, fbStrings[i][j].noteName);
+      } else {
+        innerStuff(fbStrings[i][j].td, "");
+      }
+    }
+  }
 }
 
 //====================================================
@@ -357,3 +369,4 @@ function spotClicked(fbNum, row, col)
   setStringInts(0)
   setStringInts(1)
 }
+

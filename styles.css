@@ -10,6 +10,7 @@ pre{
 }
 
 .title{
+  text-align: center;
   font-size:large;
   font-weight: bold;
 }
@@ -43,6 +44,7 @@ pre{
 
 .plainOff
 {
+  background-color: e6f9ff;
 }
 
 .nutOff
