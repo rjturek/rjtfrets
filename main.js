@@ -50,8 +50,9 @@ function init() {
   initFretboard(0)
   initFretboard(1)
 
+  // Initial keys for fretboards: C and G
   pickKey(0, 0)
-  pickKey(1, 5)
+  pickKey(1, 7)
 }
 
 //===================================================

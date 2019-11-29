@@ -1,7 +1,7 @@
 
 body{
   font-family: arial;
-  background-color: d9e6f2;
+  background-color: D7E5F5;
   text-align: center;
 }
 
@@ -13,6 +13,10 @@ pre{
   text-align: center;
   font-size:large;
   font-weight: bold;
+}
+
+.td-nice-pad{
+  padding: 5px 20px ;
 }
 
 /* Unselected Key */
@@ -39,22 +43,22 @@ pre{
   text-align: center;
   width: 40px;
   border: 1px solid black;
-  padding: 3 3 3 3;
+  padding: 4 3 4 3;
 }
 
 .plainOff
 {
-  background-color: e6f9ff;
+  background-color: E5F0FC;
 }
 
 .nutOff
 {
-  background-color: faba83;
+  background-color: C9D5E2;
 }
 
 .markerOff
 {
-  background-color: FFEFD8;
+  background-color: DFE9F5;
 }
 
 /* Highlighted spot */
