@@ -65,6 +65,7 @@ pre{
 .fretOn
 {
   font-weight:bold;
+  border-radius: 25px;
   background-color: ffffff;
   padding: 0 0 0 0;
   border: 2px solid green;
