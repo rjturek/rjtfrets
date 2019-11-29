@@ -2,7 +2,11 @@
 body{
   font-family: arial;
   background-color: D7E5F5;
-  text-align: center;
+  text-align: left;
+}
+
+h1{
+  padding: 10px 25px 0px;
 }
 
 pre{
@@ -25,6 +29,7 @@ pre{
   width: 8%;
   text-align: center;
   border: 0px ;
+  padding: 5px 15px ;
 }
 
 /* Selected Key */
@@ -34,6 +39,11 @@ pre{
   text-align: center;
   font-weight: bold;
   border: 1px solid black;
+  padding: 5px 15px ;
+}
+
+.clear-button {
+  font-size: 50px;
 }
 
 /* Common attributes of all frets */
