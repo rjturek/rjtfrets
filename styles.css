@@ -26,7 +26,7 @@ pre{
 /* Unselected Key */
 .pickkey0
 {
-  width: 8%;
+  width: 20px;
   text-align: center;
   border: 0px ;
   padding: 5px 15px ;
@@ -35,7 +35,7 @@ pre{
 /* Selected Key */
 .pickkey1
 {
-  width: 8%;
+  width: 20px;
   text-align: center;
   font-weight: bold;
   border: 1px solid black;
@@ -50,10 +50,11 @@ pre{
 .fret
 {
   font-size:small;
+  font-weight:bold;
   text-align: center;
   width: 40px;
   border: 1px solid green;
-  padding: 4 3 4 3;
+  padding: 3 3 3 3;
 }
 
 .plainOff
@@ -74,7 +75,6 @@ pre{
 /* Highlighted spot */
 .fretOn
 {
-  font-weight:bold;
   border-radius: 25px;
   background-color: ffffff;
   padding: 0 0 0 0;

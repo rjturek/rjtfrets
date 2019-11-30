@@ -173,7 +173,7 @@ function allocStrings(fbNum)
       if (j == 0)  {
         spot.fretType = "nut"
       }
-      else if (j==3 || j==5 || j==7 || j==12 )   {
+      else if (j==3 || j==5 || j==7 || j==9 || j==12 )   {
         spot.fretType = "marker"
       }
       else {
@@ -326,7 +326,7 @@ function tdLabels(fbStrings, row, col)
       } else if (showNoteNames)   {
         innerStuff(fbStrings[i][j].td, fbStrings[i][j].noteName);
       } else {
-        innerStuff(fbStrings[i][j].td, "");
+        innerStuff(fbStrings[i][j].td, "-");
       }
     }
   }
