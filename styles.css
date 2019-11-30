@@ -39,6 +39,7 @@ pre{
   text-align: center;
   font-weight: bold;
   border: 1px solid black;
+  border-radius: 8px;
   padding: 5px 15px ;
 }
 
