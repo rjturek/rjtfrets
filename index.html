@@ -72,69 +72,71 @@
       </table>
     </td>
   </tr>
-<!-------- Fretboard 0 ------------------->
+  <!-------- Fretboard 0 ------------------->
   <tr>
     <td>
       <table align="left">
         <tr>
-          <td valign="top">
-            <input class="clear-button" type="submit" value="Clear" onclick="clearNotes(0)">
-          </td>
-          <td>
-            <table id="fretboard0" cellPadding="0" cellSpacing="0" >
-            </table>
-          </td>
-        </tr>
-      </table>
-    </td>
-  </tr>
-  <!-- spacer row -->
-  <tr><td style="height: 25px;">&nbsp;</td></tr>
-<!----- Lower fretboard --------------------------------------->
-<!-------- Pick Key 1  ---------------------->
-  <tr>
-    <td>  
-      <table align="left">
-        <tr>
-          <td>
-            Key:
-          </td>
-          <td id="k_1_0" onclick=pickKey(1,0) >C </td>
-          <td id="k_1_1" onclick=pickKey(1,1) >Db</td>
-          <td id="k_1_2" onclick=pickKey(1,2) >D </td>
-          <td id="k_1_3" onclick=pickKey(1,3) >Eb</td>
-          <td id="k_1_4" onclick=pickKey(1,4) >E </td>
-          <td id="k_1_5" onclick=pickKey(1,5) >F </td>
-          <td id="k_1_6" onclick=pickKey(1,6) >Gb</td>
-          <td id="k_1_7" onclick=pickKey(1,7) >G </td>
-          <td id="k_1_8" onclick=pickKey(1,8) >Ab</td>
-          <td id="k_1_9" onclick=pickKey(1,9) >A </td>
-          <td id="k_1_10" onclick=pickKey(1,10)>Bb</td>
-          <td id="k_1_11" onclick=pickKey(1,11)>B </td>
-        </tr>
-      </table>
-    </td>
-  </tr>
-<!-------- Fretboard 1 ------------------->
-  <tr>
-    <td>
-      <table align="left">
-        <tr>
-          <td  valign="top">
-            <input class="clear-button" type="submit" value="Clear" onclick="clearNotes(1)">
-          </td>
-          <td>
-            <table id="fretboard1" cellPadding="0" cellSpacing="0"></table>
-          </td>
-        </tr>
-      </table>
-    </td>
-  </tr>
-</table>
-<!-------------------------------------------->
-
-<pre id="dumpArea"></pre>
-
+          <td valign="top" style="padding: 8 0 0 0">
+              <span class="clear-button" onclick="clearNotes(0)" >Clear</span>
+              <!-- <input class="clear-button" type="submit" value="Clear" onclick="clearNotes(0)"> -->
+            </td>
+            <td>
+              <table id="fretboard0" cellPadding="0" cellSpacing="0" >
+              </table>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <!-- spacer row -->
+    <tr><td style="height: 25px;">&nbsp;</td></tr>
+    <!----- Lower fretboard --------------------------------------->
+    <!-------- Pick Key 1  ---------------------->
+    <tr>
+      <td>  
+        <table align="left">
+          <tr>
+            <td>
+              Key:
+            </td>
+            <td id="k_1_0" onclick=pickKey(1,0) >C </td>
+            <td id="k_1_1" onclick=pickKey(1,1) >Db</td>
+            <td id="k_1_2" onclick=pickKey(1,2) >D </td>
+            <td id="k_1_3" onclick=pickKey(1,3) >Eb</td>
+            <td id="k_1_4" onclick=pickKey(1,4) >E </td>
+            <td id="k_1_5" onclick=pickKey(1,5) >F </td>
+            <td id="k_1_6" onclick=pickKey(1,6) >Gb</td>
+            <td id="k_1_7" onclick=pickKey(1,7) >G </td>
+            <td id="k_1_8" onclick=pickKey(1,8) >Ab</td>
+            <td id="k_1_9" onclick=pickKey(1,9) >A </td>
+            <td id="k_1_10" onclick=pickKey(1,10)>Bb</td>
+            <td id="k_1_11" onclick=pickKey(1,11)>B </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <!-------- Fretboard 1 ------------------->
+    <tr>
+      <td>
+        <table align="left">
+          <tr>
+              <td valign="top" style="padding: 8 0 0 0">
+              <span id="clearbutton2" class="clear-button-hidden" onclick="clearNotes(1)" >Clear</span>
+              <!-- <input id="clearbutton2" class="clear-button-hidden" type="submit" value="Clear" onclick="clearNotes(1)" > -->
+            </td>
+            <td>
+              <table id="fretboard1" cellPadding="0" cellSpacing="0"></table>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+  <!-------------------------------------------->
+  
+  <pre id="dumpArea"></pre>
+  
 </body>
 </html>
 

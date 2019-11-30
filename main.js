@@ -94,7 +94,7 @@ function clickInstruType()
   {
     alert ("Something is terribly wrong.  George Bush isn't still president, is he?")
   }
-
+  
   init()
   clearNotes(0)
   clearNotes(1)
@@ -103,12 +103,16 @@ function clickInstruType()
 //====================================================
 function clickLinkFBs(checkbox)
 {
-    if (checkbox.checked) {
-      linkFBs = true
-    }
-    else {
-      linkFBs = false
-    }
+  var secondButton = document.getElementById('clearbutton2')
+
+  if (checkbox.checked) {
+    secondButton.className = 'clear-button-hidden'
+    linkFBs = true
+  }
+  else {
+    linkFBs = false
+    secondButton.className = 'clear-button'
+  }
 
     setStringInts(0)
     setStringInts(1)
